@@ -124,7 +124,8 @@ img{
 }
 
 img{
-    width: 15vw;
+    margin-top: 1vw;
+    width: 10vw;
     height: 10vw;
 }
 
@@ -136,7 +137,8 @@ img{
 
 #movingText{
     white-space: nowrap;
-    padding-top:4vw ;
+    padding-top:5vw ;
+    padding-bottom: 3vw;
     overflow-x: auto;
 }
 
@@ -145,7 +147,7 @@ img{
 }
 
 #movingText h1{
-    font-size: 6vw;
+    font-size: 8vw;
     display: inline-block;
 }
 
@@ -155,7 +157,7 @@ img{
     border-radius: 50%;
     background-color: black;
     display: inline-block;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
     margin-right: 1vw;
     margin-left: 1vw;
 }
@@ -176,4 +178,40 @@ img{
     to{
         transform: translateX(-100%);
     }
+}
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+}
+
+#page2-bottom h1{
+    font-size: 3vw;
+    width: 50%;
+    line-height: 4vw;
+}
+
+#bottom-image{
+    width: 20%;
+}
+
+#smallimage{
+    height: 25vw;
+    width: 100%;
+    border-radius: 1vw;
+}
+
+
+#bottom-image p{
+    margin-top: 1vw;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #B8D8D8;
 }
