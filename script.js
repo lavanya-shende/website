@@ -21,7 +21,7 @@ elems.forEach(function(e){
     })
 })
 
-var headings = document.querySelectorAll('h3')
+var headings = document.querySelectorAll('h4')
 var b=document.querySelector("#div2")
 
 headings.forEach(function(h){
