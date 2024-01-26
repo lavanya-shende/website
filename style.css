@@ -133,6 +133,7 @@ img{
     min-height: 100vh;
     width: 100%;
     background-color: #B8D8D8;
+    position: relative;
 }
 
 #movingText{
@@ -181,16 +182,18 @@ img{
 }
 
 #page2-bottom{
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4.5vw;
+    padding:4.5vw;
+    position: relative;
+    z-index: 9;
 }
 
 #page2-bottom h1{
-    font-size: 3vw;
+    font-size: 4vw;
     width: 50%;
     line-height: 4vw;
 }
@@ -200,7 +203,7 @@ img{
 }
 
 #smallimage{
-    height: 25vw;
+    height: 28vw;
     width: 100%;
     border-radius: 1vw;
 }
@@ -214,4 +217,81 @@ img{
     min-height: 100vh;
     width: 100%;
     background-color: #B8D8D8;
+    position: absolute;
+    padding: 4vw 0;
+    
+}
+
+#ball{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    background:linear-gradient(to top right, orangered,rgb(255, 89, 0));
+    top: 60%;
+    left: 35%;
+    filter: blur(20px);
+    animation-name: ball-move;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 5;
+}
+
+@keyframes ball-move{
+    from{
+        filter: blur(20px);
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+#element{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.366);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+#element h3{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 119, 0);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+#element:hover .overlay{
+    top: 0;
+}
+
+#element-container{
+    /* background-color: red; */
+}
+
+#fixed-image{
+    height: 25vw;
+    width: 18vw;
+    background-color: red;
+    position: fixed;
+    z-index: 99;
+    border-radius: 0.5vw;
+    left: 50%;
+    top: 27%;
+    display: none;
 }
