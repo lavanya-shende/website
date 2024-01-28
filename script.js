@@ -3,7 +3,8 @@ const scroll = new LocomotiveScroll({
     smooth: true
 })
 
-var a = document.querySelector('#element-container')
+function page4(){
+    var a = document.querySelector('#element-container')
 var fixed = document.querySelector("#fixed-image")
 a.addEventListener("mouseenter",function(){
     fixed.style.display = "block"
@@ -34,4 +35,33 @@ headings.forEach(function(h){
         var image=h.getAttribute("data-img")
         b.style.backgroundImage=`url(${image})`
     })
+})
+}
+
+function swiper(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 100,
+      });
+}
+
+swiper()
+page4()
+
+var menu = document.querySelector("nav h3")
+var scr = document.querySelector("#fullScr")
+var img = document.querySelector("nav img")
+var flag= 0
+menu.addEventListener("click",function(){
+    if(flag==0){
+        fullScr.style.top=0
+        img.style.opacity =0
+        flag=1
+    }else{
+        fullScr.style.top="-100%"
+        img.style.opacity =1
+        flag=0
+    }
+    
 })
