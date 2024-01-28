@@ -462,6 +462,55 @@ img{
     padding-right: 5vw;
   }
 
+  #loader{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+    transition: all linear 0.7s;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #loader h1{
+    color: transparent;
+    font-size: 4vw;
+    background:linear-gradient(to right,rgb(0, 26, 255),rgb(0, 255, 242));
+    -webkit-background-clip:text;
+    position:absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+  }
+
+  #loader h1:nth-child(2){
+    animation-delay: 2s;
+  }
+
+  #loader h1:nth-child(3){
+    animation-delay: 3s;
+  }
+
+  @keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
   @media (max-width:600px) {
     #page1{
         min-height: 100vh;
@@ -561,4 +610,32 @@ img{
         top: 30%;
         left: 20%;
     }
+
+    #loader h1{
+        font-size: 9vw;
+      }
+
+    #fixed-image{
+        height: 42vw;
+        width: 27vw;
+    }
+
+    #element h3{
+        font-size: 5vw;
+        position: relative;
+        z-index: 9;
+    }
+
+    #last{
+        font-size: 3vw;
+    }
+
+    #footerdiv2 p{
+        font-size: 3vh;
+    }
+
+    #footerdiv1 h3{
+        font-size: 3.5vh;
+    }
+    
   }
